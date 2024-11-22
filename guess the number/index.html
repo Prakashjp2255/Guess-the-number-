@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number </title>
+</head>
+
+
+<body>
+    <h1>GUESS THE NUMBER FROM 1 TO 10 </h1>
+    <input id="box1" type="number">
+    <button onclick="checkscore()"> CHECK </button>
+    <p id="score">YOUR RESULT</p>
+    <p id="rightorwrong">YOU RIGHT / WRONG</p>
+    <p id="points">YOUR POINTS : 10</p>
+
+
+
+    <script>
+        var boxinput = document.getElementById("box1")
+        var pointfn = 10
+
+
+        function checkscore() {
+
+            var a = Math.random()
+            var scorenum = Math.floor(a * 10) + 1
+            var scorerandom = score.textContent
+            score.textContent = scorenum
+
+            var guess = boxinput.value
+            if (boxinput.value == scorenum) {
+                var right = rightorwrong.textContent
+                console.log("you win")
+                rightorwrong.textContent = "YOU WIN BRO "
+
+
+            }
+            else {
+                pointfn = pointfn - 1
+                points.textContent = "YOUR POINTS :" + pointfn
+                var wrong = rightorwrong.textContent
+                alert("YOU LOSE ")
+                console.log("you lose")
+                rightorwrong.textContent = "YOU LOSE"
+
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+
+<style>
+    body {
+        padding: 2px;
+        background-color: burlywood;
+        margin-top: 20%;
+        text-align: center;
+
+    }
+
+    h1 {
+       
+        
+        padding: 2px;
+        border-radius: 20px;
+        color: aliceblue;
+        background-color: chartreuse;
+    }
+    
+</style>
+
+</html>
+
